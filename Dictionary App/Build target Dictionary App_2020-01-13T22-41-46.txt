@@ -1,0 +1,11 @@
+
+Showing All Errors Only
+
+Build target Dictionary App of project Dictionary App with configuration Release
+
+ProcessInfoPlistFile /Users/matt/Library/Developer/Xcode/DerivedData/ToDo_App-eduugxdygunqhsdueywanbvdkzjy/Build/Products/Release-iphonesimulator/Dictionary\ App.app/Info.plist /Users/matt/Library/Mobile\ Documents/com~apple~CloudDocs/Computer\ Science/DictionaryApp/ToDo\ App/ToDo\ App/Info.plist (in target 'Dictionary App' from project 'Dictionary App')
+    cd /Users/matt/Library/Mobile\ Documents/com~apple~CloudDocs/Computer\ Science/DictionaryApp/ToDo\ App
+    builtin-infoPlistUtility /Users/matt/Library/Mobile\ Documents/com\~apple\~CloudDocs/Computer\ Science/DictionaryApp/ToDo\ App/ToDo\ App/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/matt/Library/Developer/Xcode/DerivedData/ToDo_App-eduugxdygunqhsdueywanbvdkzjy/Build/Products/Release-iphonesimulator/Dictionary\ App.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/matt/Library/Developer/Xcode/DerivedData/ToDo_App-eduugxdygunqhsdueywanbvdkzjy/Build/Intermediates.noindex/Dictionary\ App.build/Release-iphonesimulator/Dictionary\ App.build/Base.lproj/LaunchScreen-SBPartialInfo.plist -additionalcontentfile /Users/matt/Library/Developer/Xcode/DerivedData/ToDo_App-eduugxdygunqhsdueywanbvdkzjy/Build/Intermediates.noindex/Dictionary\ App.build/Release-iphonesimulator/Dictionary\ App.build/Base.lproj/Main-SBPartialInfo.plist -additionalcontentfile /Users/matt/Library/Developer/Xcode/DerivedData/ToDo_App-eduugxdygunqhsdueywanbvdkzjy/Build/Intermediates.noindex/Dictionary\ App.build/Release-iphonesimulator/Dictionary\ App.build/assetcatalog_generated_info.plist -o /Users/matt/Library/Developer/Xcode/DerivedData/ToDo_App-eduugxdygunqhsdueywanbvdkzjy/Build/Products/Release-iphonesimulator/Dictionary\ App.app/Info.plist
+
+error: Build input file cannot be found: '/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/Computer Science/DictionaryApp/ToDo App/ToDo App/Info.plist' (in target 'Dictionary App' from project 'Dictionary App')
+

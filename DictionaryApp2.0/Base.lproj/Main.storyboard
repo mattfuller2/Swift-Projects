@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UFb-KI-YYK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dictionary Words-->
+        <scene sceneID="uGj-ns-Nd7">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="H8q-5u-Rdx" customClass="WordTableViewController" customModule="DictionaryApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" sectionIndexMinimumDisplayRowCount="1" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="dJY-Or-TP8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Search dictionary list..." showsSearchResultsButton="YES" showsCancelButton="YES" id="9ah-0W-hhJ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search" textContentType="name"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordTableViewCell" rowHeight="90" id="Nzg-Uk-nOE" customClass="WordTableViewCell" customModule="DictionaryApp2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="111.5" width="374" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" tableViewCell="Nzg-Uk-nOE" id="7sm-sR-rbp">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" enabled="NO" id="ROO-vK-IUU">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="nameLabel" label="nameLabel">
+                                                <accessibilityTraits key="traits" selected="YES" staticText="YES"/>
+                                            </accessibility>
+                                            <attributedString key="attributedText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" selected="YES" staticText="YES" searchField="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <connections>
+                                    <segue destination="ROB-qi-Let" kind="show" identifier="ShowDetail" id="aeT-Qo-dpt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H8q-5u-Rdx" id="t2B-kg-h1L"/>
+                            <outlet property="delegate" destination="H8q-5u-Rdx" id="wuE-lq-f2b"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Dictionary Words" id="xZv-mI-sn1">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="omU-LK-pDu">
+                            <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="GM9-a2-Pal">
+                            <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="QYw-Uw-gKx" kind="show" identifier="AddNewWord" id="c6A-qI-HKP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaO-8U-kqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.62318840579712" y="122.54464285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kL9-3J-DZq">
+            <objects>
+                <viewController title="Add New Word" id="ROB-qi-Let" userLabel="View Controller" customClass="ViewController" customModule="DictionaryApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Afl-RT-z1e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3o6-iN-jte" userLabel="Vertical Stack">
+                                <rect key="frame" x="25" y="117" width="369" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pDO-AC-rot">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc0-Ue-1aJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="34"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="New Word:">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name="AmericanTypewriter-Condensed"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter a new word." adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" minimumFontSize="14" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="B0r-1u-WaY">
+                                                <rect key="frame" x="101" y="0.0" width="268" height="34"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" keyboardKey="YES" allowsDirectInteraction="YES"/>
+                                                </accessibility>
+                                                <viewLayoutGuide key="safeArea" id="u6M-Ua-gXL"/>
+                                                <attributedString key="attributedText"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" returnKeyType="next" textContentType="name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7EQ-JF-Wa8">
+                                        <rect key="frame" x="0.0" y="46" width="369" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wa-iy-SiK">
+                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="34"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Definition:">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name="AmericanTypewriter-Condensed"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="right" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter new word's definition." minimumFontSize="15" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="wE0-sZ-Y9i">
+                                                <rect key="frame" x="99.5" y="0.0" width="269.5" height="34"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                                <viewLayoutGuide key="safeArea" id="OpO-ma-oam"/>
+                                                <attributedString key="attributedText"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="369" id="ztB-p1-O7g"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNC-ek-XfR">
+                                <rect key="frame" x="134" y="205" width="151" height="36.5"/>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Add New Word">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="AmericanTypewriter-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="addNewWordButton:" destination="ROB-qi-Let" eventType="touchUpInside" id="ayH-ck-GgD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7Y-PH-DLm" userLabel="fullNameLabel">
+                                <rect key="frame" x="181" y="292" width="52.5" height="90"/>
+                                <accessibility key="accessibilityConfiguration" identifier="fullWordLabel" label="fullNameLabel">
+                                    <accessibilityTraits key="traits" staticText="YES" summaryElement="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="0.0"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="fullWord">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="Noteworthy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qNC-ek-XfR" firstAttribute="leading" secondItem="rjt-QB-7K8" secondAttribute="leading" constant="134" id="IYq-z7-7nL"/>
+                            <constraint firstItem="z7Y-PH-DLm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rjt-QB-7K8" secondAttribute="leading" id="Kj9-WU-01p"/>
+                            <constraint firstItem="rjt-QB-7K8" firstAttribute="bottom" secondItem="z7Y-PH-DLm" secondAttribute="bottom" constant="480" id="RXx-2m-WuD"/>
+                            <constraint firstItem="qNC-ek-XfR" firstAttribute="top" secondItem="3o6-iN-jte" secondAttribute="bottom" constant="8" symbolic="YES" id="Wtf-Tt-sSy"/>
+                            <constraint firstItem="3o6-iN-jte" firstAttribute="leading" secondItem="rjt-QB-7K8" secondAttribute="leading" constant="25" id="XKR-V4-bsD"/>
+                            <constraint firstItem="z7Y-PH-DLm" firstAttribute="centerY" secondItem="Afl-RT-z1e" secondAttribute="centerY" constant="-111" id="ZVn-ky-idz"/>
+                            <constraint firstItem="z7Y-PH-DLm" firstAttribute="centerX" secondItem="qNC-ek-XfR" secondAttribute="centerX" constant="-2.5" id="hnj-Uo-dpr"/>
+                            <constraint firstItem="rjt-QB-7K8" firstAttribute="trailing" secondItem="3o6-iN-jte" secondAttribute="trailing" constant="20" id="pvI-vG-iDS"/>
+                            <constraint firstItem="rjt-QB-7K8" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="z7Y-PH-DLm" secondAttribute="trailing" id="u2H-sf-gTE"/>
+                            <constraint firstItem="qNC-ek-XfR" firstAttribute="top" secondItem="Afl-RT-z1e" secondAttribute="top" constant="205" id="ygN-Ms-00a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rjt-QB-7K8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Word" id="3uZ-x9-JsJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FL5-mq-glo">
+                            <connections>
+                                <action selector="cancel:" destination="ROB-qi-Let" id="SUY-eS-zyH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kA0-ni-pp5">
+                            <connections>
+                                <segue destination="MeO-41-MB8" kind="unwind" unwindAction="unwindToListWithSender:" id="rGp-y2-Que"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fullWordLabel" destination="z7Y-PH-DLm" id="tzo-hj-2FS"/>
+                        <outlet property="newDefinitionTextField" destination="wE0-sZ-Y9i" id="ahd-rQ-slo"/>
+                        <outlet property="newWordTextField" destination="B0r-1u-WaY" id="ThP-h6-3oY"/>
+                        <outlet property="saveButton" destination="kA0-ni-pp5" id="KwB-F8-ude"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIa-bO-bdM" sceneMemberID="firstResponder"/>
+                <exit id="MeO-41-MB8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1808.6956521739132" y="122.54464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ROf-ag-mPf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UFb-KI-YYK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fjk-tM-Dlj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="H8q-5u-Rdx" kind="relationship" relationship="rootViewController" id="lin-NW-ry7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xr-MM-sxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-507" y="123"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ygk-0Y-ggX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QYw-Uw-gKx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Km2-kc-pzA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wA7-M8-MzH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ROB-qi-Let" kind="relationship" relationship="rootViewController" id="7tm-Rr-xfi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uGT-6p-733" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7tm-Rr-xfi"/>
+    </inferredMetricsTieBreakers>
+</document>
